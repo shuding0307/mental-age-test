@@ -13,6 +13,9 @@ export default function TestPage({goResult}: {goResult : () => void}) {
   const resultAge = useStore((state) => state.resultAge);
   const setResultAge = useStore((state) => state.setResultAge);
 
+  const userAge = useStore((state) => state.userAge);
+  const userName = useStore((state) => state.userName);
+
   useEffect(() => {
     setQuestion(questions[index].q);
   }, [index]);
@@ -34,7 +37,7 @@ export default function TestPage({goResult}: {goResult : () => void}) {
     return (
       <div className="flex flex-col items-center mt-20">
         <h2>Mental Age Test</h2>
-        {age} {resultAge}
+        {age} {resultAge} {userAge} {userName}
           <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-7/12 bg-yellow-50 min-w-96">
 
             <div id="progressBar" className="border rounded-md min-w-80 h-3 bg-gray-200">
