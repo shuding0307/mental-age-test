@@ -4,7 +4,7 @@ import useFunnel from "../hooks/useFunnel";
 import InputInfoPage from "./_component/InputInfoPage";
 import TestPage from "./_component/TestPage";
 import ResultPage from "./_component/ResultPage";
-import StartPage from "./_component/startPage";
+import StartPage from "./_component/StartPage";
 
 const pages : string[] = [
   "시작하기",
