@@ -13,13 +13,10 @@ export default function TestPage({goResult}: {goResult : () => void}) {
   const resultAge = useStore((state) => state.resultAge);
   const setResultAge = useStore((state) => state.setResultAge);
 
-  const userAge = useStore((state) => state.userAge);
-  const userName = useStore((state) => state.userName);
-
   useEffect(() => {
     setQuestion(questions[index].q);
   }, [index]);
-  
+
   const handleNo = () : void => {
     setAge(questions[index].value.no);
   };
@@ -33,11 +30,18 @@ export default function TestPage({goResult}: {goResult : () => void}) {
     setResultAge(resultAge + age);
     setAge(0);
   }
+
+  const handleLastQ = () : void => {
+    setResultAge(resultAge + age);
+    ( resultAge < 13 ) && setResultAge(13);
+    ( resultAge > 55 ) && setResultAge(53);
+    goResult();
+  }
   
     return (
       <div className="flex flex-col items-center mt-20">
         <h2>Mental Age Test</h2>
-        {age} {resultAge} {userAge} {userName}
+        {age} {resultAge}
           <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-7/12 bg-yellow-50 min-w-96">
 
             <div id="progressBar" className="border rounded-md min-w-80 h-3 bg-gray-200">
@@ -55,7 +59,7 @@ export default function TestPage({goResult}: {goResult : () => void}) {
               onClick={handleYes}>그렇다</button>
             </div>
             <div id="nextBtn" className="mb-5">
-            <button onClick={age !== 0 ? (index === endpoint-1 ? goResult : handleNextQ) : () => {}}
+            <button onClick={age !== 0 ? (index === endpoint-1 ? handleLastQ : handleNextQ) : () => {}}
                     className={age !== 0 ? "hover:bg-gray-200 shadow rounded px-2 bg-zinc-50" 
                                           : "text-red-600"}>
               {age !== 0 ? "다음으로" : "선택해주세요"}
