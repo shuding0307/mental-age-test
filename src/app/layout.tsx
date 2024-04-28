@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -28,7 +27,6 @@ export default function RootLayout({
         src="https://developers.kakao.com/sdk/js/kakao.js"
         strategy="afterInteractive"
       />
-      <GoogleAnalytics gaId="G-PVWQMP97BS" />
     </html>
   );
 }
