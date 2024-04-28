@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export default function Home() {
 
