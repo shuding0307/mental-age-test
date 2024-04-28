@@ -7,7 +7,7 @@ type KakaoShareButtonProps = {
 };
 
 const KakaoShareButton = ({ description }: KakaoShareButtonProps) => {
-  const shareUrl = typeof window !== "undefined" ? window.location.href : "https://mental-age-test.vercel.app";
+  const shareUrl = typeof window !== "undefined" ? window.location.href : "https://mental-age-test.vercel.app/";
 
   useEffect(() => {
     if (typeof window !== "undefined") {
