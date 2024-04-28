@@ -1,5 +1,8 @@
 import useStore from "../../store"
-import KakaoShareButton from "@/Components/KakaoShare";
+import dynamic from "next/dynamic";
+
+const KakaoShareButton = dynamic(import("@/Components/KakaoShare"));
+
 
 export default function ResultPage() {
   const userName = useStore((state) => state.userName);
