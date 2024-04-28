@@ -39,15 +39,14 @@ export default function TestPage({goResult}: {goResult : () => void}) {
   }
   
     return (
-      <div className="flex flex-col items-center mt-11">
-        <h2 className='text-xl'>Mental Age Test</h2>
-          <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-[500px] bg-yellow-50 min-w-96 h-[494px]">
-
-            <div id="progressBar" className="border rounded-md min-w-80 h-3 bg-gray-200">
-              <div id="progressBar" className="bg-rose-300 rounded-md max-w-96 h-3" style={{width: ((100/endpoint)*(index+1)) + '%'}}/>
+      <div className='flex flex-col items-center justify-center sm:w-full sm:h-screen'>
+        <h2 className='text-center text-xl mt-14 sm:mt-0'>Mental Age Test</h2>
+          <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 bg-yellow-50 w-[500px] h-[494px] sm:w-72 sm:h-3/5">
+            <div id="progressBarCon" className="border rounded-md min-w-80 h-3 sm: h-2 bg-gray-200 sm:min-w-56">
+              <div id="progressBar" className="bg-rose-300 rounded-md max-w-80 sm:max-w-56 h-3 sm:h-2" style={{width: ((100/endpoint)*(index+1)) + '%'}}/>
             </div>
 
-            <div id="qBox" className="my-20 px-8 min-h-14">
+            <div id="qBox" className="my-20 sm:my-10 px-8 min-h-14 sm:text-sm">
               {question}
             </div>
 

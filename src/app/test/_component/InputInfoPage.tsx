@@ -2,12 +2,11 @@ import useStore from "../../store";
 
 export default function InputInfoPage({goNext} : {goNext : () => void}) {
   const setUserName = useStore((state) => state.setUserName);
-  const setUserAge = useStore((state) => state.setUserAge);
   const setResultAge = useStore((state) => state.setResultAge);
 
   return (
-    <div className="flex flex-col items-center mt-20">
-      <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-[500px] bg-yellow-50 min-w-96 h-[494px]">
+    <div className='flex justify-center sm:w-full sm:h-screen'>
+      <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-[500px] bg-yellow-50 h-[494px] mt-20 sm:mt-36 sm:w-72 sm:h-3/5">
       <h2 className='text-xl'>정신연령 테스트</h2>
         <form className="flex flex-col gap-3">
           <input className="bg-white-50 text-blue-gray-700 border focus:border-1 text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 "
@@ -22,7 +21,6 @@ export default function InputInfoPage({goNext} : {goNext : () => void}) {
                 placeholder="나이"
                 onChange={(e) => {
                   const age = parseFloat(e.target.value);
-                  setUserAge(age);
                   setResultAge(age);
                 }}>
           </input>
