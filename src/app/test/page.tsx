@@ -5,7 +5,6 @@ import InputInfoPage from "./_component/InputInfoPage";
 import TestPage from "./_component/TestPage";
 import ResultPage from "./_component/ResultPage";
 import StartPage from "./_component/StartPage";
-import GoResultPage from "./_component/ResultPage";
 
 const pages : string[] = [
   "시작하기",
