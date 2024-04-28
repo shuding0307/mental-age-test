@@ -41,7 +41,7 @@ export default function TestPage({goResult}: {goResult : () => void}) {
     return (
       <div className="flex flex-col items-center mt-11">
         <h2 className='text-xl'>Mental Age Test</h2>
-          <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-7/12 bg-yellow-50 min-w-96 h-[494px]">
+          <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-[500px] bg-yellow-50 min-w-96 h-[494px]">
 
             <div id="progressBar" className="border rounded-md min-w-80 h-3 bg-gray-200">
               <div id="progressBar" className="bg-rose-300 rounded-md max-w-96 h-3" style={{width: ((100/endpoint)*(index+1)) + '%'}}/>
