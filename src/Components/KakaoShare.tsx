@@ -45,7 +45,7 @@ const KakaoShareButton = ({ description }: KakaoShareButtonProps) => {
   return (
     <div onClick={handleShare}>
       <Image
-        className="w-10 h-10 cursor-pointer sm:w-3 sm:h-3"
+        className="w-10 h-10 cursor-pointer sm:w-1 sm:h-1"
         src={KakaoImage}
         alt="카카오톡 공유 이미지"
       />
