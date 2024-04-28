@@ -1,7 +1,6 @@
 import useStore from "../../store"
 import dynamic from "next/dynamic";
-
-const KakaoShareButton = dynamic(import("@/Components/KakaoShare"));
+import KakaoShareButton from "@/Components/KakaoShare";
 
 
 export default function ResultPage() {
