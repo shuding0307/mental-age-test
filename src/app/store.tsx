@@ -4,11 +4,9 @@ interface Store {
     resultAge: number;
     age: number;
     userName: string;
-    userAge: number;
     setResultAge: (result: number) => void;
     setAge: (newAge: number) => void;
     setUserName: (inputName: string) => void;
-    setUserAge: (inputAge: number) => void;
 }
 
 const useStore = create<Store>((set) => ({
@@ -19,7 +17,6 @@ const useStore = create<Store>((set) => ({
     setAge: (newAge: number) => {set({age: newAge})},
     setResultAge: (result: number) => {set({resultAge: result})},
     setUserName: (inputName: string) => {set({userName: inputName})},
-    setUserAge: (inputAge: number) => {set({userAge: inputAge})},
 }));
 
 export default useStore;
