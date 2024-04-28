@@ -29,13 +29,23 @@ const KakaoShareButton = ({ description }: KakaoShareButtonProps) => {
         mobileWebUrl: shareUrl,
         webUrl: shareUrl,
       },
+      buttons: [
+        {
+          title: "테스트 하러가기",
+          link: {
+            mobileWebUrl: shareUrl,
+            webUrl: shareUrl,
+          },
+        },
+      ],
+
     });
   };
 
   return (
     <div onClick={handleShare}>
       <Image
-        className="w-10 h-10 cursor-pointer sm:w-5 h-10"
+        className="w-10 h-10 cursor-pointer sm:w-5 h-15"
         src={KakaoImage}
         alt="카카오톡 공유 이미지"
       />
