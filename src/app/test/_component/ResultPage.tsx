@@ -1,4 +1,3 @@
-import Link from "next/link";
 import useStore from "../../store"
 
 export default function ResultPage() {

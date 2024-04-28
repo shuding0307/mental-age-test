@@ -1,4 +1,3 @@
-
 import useStore from "../../store";
 
 export default function InputInfoPage({goNext} : {goNext : () => void}) {
