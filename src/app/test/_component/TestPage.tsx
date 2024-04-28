@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { questions } from "../data/data";
-import useStore from "../store";
+import useStore from "../../store";
 
 export default function TestPage({goResult}: {goResult : () => void}) {
   const [ question, setQuestion ] = useState<string>('');
@@ -39,10 +39,9 @@ export default function TestPage({goResult}: {goResult : () => void}) {
   }
   
     return (
-      <div className="flex flex-col items-center mt-20">
-        <h2>Mental Age Test</h2>
-        {age} {resultAge}
-          <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-7/12 bg-yellow-50 min-w-96">
+      <div className="flex flex-col items-center mt-11">
+        <h2 className='text-xl'>Mental Age Test</h2>
+          <div id="container" className="flex flex-col items-center justify-between border-2 border-gray-300 rounded-xl py-8 w-7/12 bg-yellow-50 min-w-96 h-[494px]">
 
             <div id="progressBar" className="border rounded-md min-w-80 h-3 bg-gray-200">
               <div id="progressBar" className="bg-rose-300 rounded-md max-w-96 h-3" style={{width: ((100/endpoint)*(index+1)) + '%'}}/>
@@ -60,7 +59,7 @@ export default function TestPage({goResult}: {goResult : () => void}) {
             </div>
             <div id="nextBtn" className="mb-5">
             <button onClick={age !== 0 ? (index === endpoint-1 ? handleLastQ : handleNextQ) : () => {}}
-                    className={age !== 0 ? "hover:bg-gray-200 shadow rounded px-2 bg-zinc-50" 
+                    className={age !== 0 ? "hover:bg-gray-200 shadow rounded px-2 bg-white" 
                                           : "text-red-600"}>
               {age !== 0 ? "다음으로" : "선택해주세요"}
               </button>
