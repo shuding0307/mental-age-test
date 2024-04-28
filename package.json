@@ -10,12 +10,15 @@
     "vercel-deploy": "next build && next export"
   },
   "dependencies": {
+    "@next/third-parties": "^14.0.5-canary.38",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-ga4": "^2.1.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.19",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

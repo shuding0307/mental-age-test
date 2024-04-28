@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "정신연령 테스트",
@@ -15,7 +16,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body >{children}</body>
+      <GoogleAnalytics gaId="G-PVWQMP97BS" />
     </html>
   );
 }

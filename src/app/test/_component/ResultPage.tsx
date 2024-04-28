@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import useStore from "../../store"
+import { sendGAEvent } from '@next/third-parties/google'
 
 export default function ResultPage() {
   const userName = useStore((state) => state.userName);
   const resultAge = useStore((state) => state.resultAge);
+
+  useEffect(() => {
+    sendGAEvent({ event: 'buttonClicked', value: 'xyz' })
+  }, [])
 
     return (
       <div className='flex justify-center sm:w-full sm:h-screen'>
