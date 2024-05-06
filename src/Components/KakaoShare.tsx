@@ -43,7 +43,7 @@ const KakaoShareButton = ({ description }: KakaoShareButtonProps) => {
   };
 
   return (
-    <div onClick={handleShare}>
+    <div className="w-5 h-5" onClick={handleShare}>
       <Image
         className="w-5 h-5 cursor-pointer"
         src={KakaoImage}

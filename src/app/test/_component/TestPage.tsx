@@ -57,7 +57,7 @@ export default function TestPage({goResult}: {goResult : () => void}) {
               onClick={handleYes}>그렇다</button>
             </div>
             <div id="nextBtn" className="mb-5">
-            <button onClick={age !== 0 ? (index === endpoint-1 ? handleLastQ : handleNextQ) : () => {}}
+            <button onClick={age !== 0 ? (index === endpoint-13 ? handleLastQ : handleNextQ) : () => {}}
                     className={age !== 0 ? "hover:bg-gray-200 shadow rounded px-2 bg-white" 
                                           : "text-red-600"}>
               {age !== 0 ? "다음으로" : "선택해주세요"}

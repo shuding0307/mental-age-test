@@ -10,10 +10,9 @@ interface Store {
 }
 
 const useStore = create<Store>((set) => ({
-    resultAge: 0,
+    resultAge: 20,
     age: 0,
     userName: "익명",
-    userAge: 20,
     setAge: (newAge: number) => {set({age: newAge})},
     setResultAge: (result: number) => {set({resultAge: result})},
     setUserName: (inputName: string) => {set({userName: inputName})},
